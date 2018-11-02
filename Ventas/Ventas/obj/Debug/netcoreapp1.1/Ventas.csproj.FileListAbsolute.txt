@@ -1,0 +1,9 @@
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\bin\Debug\netcoreapp1.1\Ventas.deps.json
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\bin\Debug\netcoreapp1.1\Ventas.runtimeconfig.json
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\bin\Debug\netcoreapp1.1\Ventas.runtimeconfig.dev.json
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\bin\Debug\netcoreapp1.1\Ventas.dll
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\bin\Debug\netcoreapp1.1\Ventas.pdb
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\obj\Debug\netcoreapp1.1\Ventas.csprojResolveAssemblyReference.cache
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\obj\Debug\netcoreapp1.1\Ventas.AssemblyInfo.cs
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\obj\Debug\netcoreapp1.1\Ventas.dll
+c:\users\adolfo\documents\visual studio 2017\Projects\Ventas\Ventas\obj\Debug\netcoreapp1.1\Ventas.pdb
