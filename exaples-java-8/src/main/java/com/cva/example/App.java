@@ -1,11 +1,12 @@
 package com.cva.example;
 
-import com.cva.example.Entities.Person;
-import com.cva.example.Entities.Student;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import com.cva.example.Entities.Person;
+import com.cva.example.Entities.Student;
+import com.cva.example.handdleError.PersonException;
 /**
  * Hello world!
  *
@@ -46,12 +47,20 @@ public class App
     }
 
 
-    public static void printMessage(Object objeto){
-        if(objeto instanceof Person){
-            System.out.println("Es una persona");
-        }else if(objeto instanceof Student){
-            System.out.println("Es un estudiante");
+    public static void printMessage(Object objeto) {
+        
+        try {
+            
+            if(objeto instanceof Person){
+                System.out.println("Es una persona");
+            }else if(objeto instanceof Student){
+                System.out.println("Es un estudiante");
+               
+            }
+        } catch (PersonException e) {
+            System.out.println(e.getMessage());
         }
+        
     }
 
 }
