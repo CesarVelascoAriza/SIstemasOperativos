@@ -98,8 +98,10 @@ public class App
         Future<String> task1 = executor.submit(new ImplCalleable());
         Future<?> task2 = executor.submit(new implRunable(0));
         */
-        Future<String> task1 = completionService.submit(new ImplCalleable());
-        Future<String> task2 = completionService.submit(new ImplCalleable());
+        //Future<String> task1 = 
+        completionService.submit(new ImplCalleable());
+        //Future<String> task2 = 
+        completionService.submit(new ImplCalleable());
 
         /*while (!task1.isDone() && !task2.isDone()) {
             System.out.println("Task is done");
@@ -107,12 +109,11 @@ public class App
         }*/
         //System.out.println(task1.get());
         //System.out.println(task2.get());
-        while (completionService.poll() != null) {
-            Future<String> task = completionService.take();
-            System.out.println(task.get());
+        while (true) {
+            System.out.println(completionService.take().get());
         }
 
-        executor.shutdown();
+        //executor.shutdown();
     }
 
 
