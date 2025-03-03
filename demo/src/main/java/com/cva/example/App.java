@@ -1,5 +1,7 @@
 package com.cva.example;
 
+import com.cva.example.ejercicio.Ejercicio33;
+
 /**
  * Hello world!
  */
@@ -12,6 +14,7 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Ejercicio33 ejercicio33 = new Ejercicio33();
+        ejercicio33.desarrollo();
     }
 }
