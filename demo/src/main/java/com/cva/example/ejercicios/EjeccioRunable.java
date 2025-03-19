@@ -11,7 +11,7 @@ public class EjeccioRunable {
     }
 
     public void procesarNumeros() throws InterruptedException {
-        Long rangoA = 1L;
+        Long rangoA = -1L;
         Long rangoB = 1000L;
         List<Long> listaNumeros = listadoAprocesar(rangoA, rangoB);
         Integer total = 0;
@@ -39,7 +39,7 @@ public class EjeccioRunable {
         for (Long i = rangoA; i <= rangoB; i++) {
             listaNumeros.add(i);
         }
-        listaNumeros.add(-1L); // Agregar un número negativo a la lista
+        //listaNumeros.add(-100L); // Agregar un número negativo a la lista
         return listaNumeros;
     }
 }
@@ -70,8 +70,8 @@ class Procesar implements Runnable {
 
                 }
             } catch (NegativeNumberException e) {
-                System.err.println("Numero Par : " + numero + " Hilo : " + hilo);
-                listaNumerosNegativos.add(numero);
+                //System.err.println("Numero Par : " + numero + " Hilo : " + hilo);
+                this.listaNumerosNegativos.add(numero);
             }
 
         }
