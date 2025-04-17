@@ -1,0 +1,16 @@
+{
+  "name": "proyectopr-front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "commonjs": "^0.0.1",
+    "typescript": "^5.8.3"
+  }
+}

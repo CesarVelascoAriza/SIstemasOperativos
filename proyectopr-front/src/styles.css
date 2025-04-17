@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+}
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Estilo base para el botón */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilo base para el contenedor */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Estilo base para el formulario con 4 columnas */
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px;
+}
+
+/* Estilo para los inputs y textarea */
+input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    grid-column: span 4; /* Por defecto, los elementos ocupan las 4 columnas */
+}
+
+/* Botón ocupa 2 columnas */
+button {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    input, button, textarea {
+        font-size: 14px;
+        grid-column: span 2; /* Ajusta los elementos a 2 columnas */
+    }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    form {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    input, button, textarea {
+        font-size: 12px;
+        grid-column: span 1; /* Ajusta los elementos a 1 columna */
+    }
+}
+
+/* Estilo base para el formulario con 4 columnas */
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 15px;
+}
+
+/* Estilo para los inputs y textarea */
+input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    grid-column: span 4; /* Por defecto, los elementos ocupan las 4 columnas */
+}
+
+/* Botón ocupa 2 columnas */
+button {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    input, button, textarea {
+        font-size: 14px;
+        grid-column: span 2; /* Ajusta los elementos a 2 columnas */
+    }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    form {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    input, button, textarea {
+        font-size: 12px;
+        grid-column: span 1; /* Ajusta los elementos a 1 columna */
+    }
+}/* Estilo base para el formulario con 4 columnas */
+form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    gap: 15px;
+}
+
+/* Estilo para los inputs y textarea */
+input, button, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    grid-column: span 4; /* Por defecto, los elementos ocupan las 4 columnas */
+}
+
+/* Botón ocupa 2 columnas */
+button {
+    grid-column: span 2;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Diseño responsivo para pantallas medianas */
+@media (max-width: 768px) {
+    form {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+    }
+
+    input, button, textarea {
+        font-size: 14px;
+        grid-column: span 2; /* Ajusta los elementos a 2 columnas */
+    }
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 480px) {
+    form {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas */
+    }
+
+    input, button, textarea {
+        font-size: 12px;
+        grid-column: span 1; /* Ajusta los elementos a 1 columna */
+    }
+}
