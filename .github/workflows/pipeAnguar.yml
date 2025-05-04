@@ -1,0 +1,41 @@
+name: Feature Release Pipeline
+
+on:
+  push:
+    branches:
+      - 'feature/*'  # Trigger para ramas de características
+      - 'HU/*'       # Trigger para ramas de HU
+  pull_request:
+    branches:
+      - master       # Trigger para PR hacia master
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js (o cualquier entorno necesario)
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+  release:
+    if: github.ref == 'refs/heads/master'  # Solo se ejecuta en master
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create Release
+        run: |
+          echo "Creating release..."
+          # Aquí puedes agregar comandos para generar un release

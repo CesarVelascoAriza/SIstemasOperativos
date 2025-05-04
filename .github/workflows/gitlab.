@@ -1,0 +1,20 @@
+stages:
+  - test
+  - release
+
+test:
+  stage: test
+  script:
+    - echo "Running tests..."
+    - npm install
+    - npm test
+  only:
+    - /^feature/  # Ramas feature
+    - /^HU/       # Ramas HU
+
+release:
+  stage: release
+  script:
+    - echo "Creating release..."
+  only:
+    - master  # Solo se ejecuta en master
