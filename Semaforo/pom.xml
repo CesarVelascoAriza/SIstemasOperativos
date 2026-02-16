@@ -6,7 +6,7 @@
 
   <groupId>com.edu.ucentral</groupId>
   <artifactId>semaforo</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 
   <properties>
     <!-- compile with Java 24 -->
@@ -16,10 +16,20 @@
   </properties>
 
   <dependencies>
-    <!-- Swing is part of the JDK, no external deps required -->
+    <!-- Swing is included in the JDK -->
+    <!-- JUnit 5 for unit testing -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.0</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
+    <!-- produce a jar with a stable name (no version suffix) -->
+    <finalName>semaforo</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -28,6 +38,30 @@
         <configuration>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+
+      <!-- configure jar manifest with main class -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.edu.ucentral.Semaforo</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <!-- sure-fire for running JUnit 5 tests -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <useModulePath>false</useModulePath>
         </configuration>
       </plugin>
     </plugins>
