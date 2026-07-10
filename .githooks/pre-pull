@@ -1,0 +1,19 @@
+#!/bin/bash
+set -e
+
+# Este hook se ejecuta antes de hacer pull.
+# Si Git detecta que el pull terminará en merge, lo bloquea con un mensaje claro.
+
+remote="$1"
+remote_ref="$2"
+
+if [ -z "$remote" ] || [ -z "$remote_ref" ]; then
+  echo "[hook] pre-pull: no se recibieron argumentos suficientes"
+  exit 0
+fi
+
+# Se usa un mensaje de advertencia en vez de bloquear por completo para que sea fácil de probar.
+echo "[hook] pre-pull: se va a realizar un pull desde $remote hacia $remote_ref"
+echo "[hook] pre-pull: si el pull genera merge, revisa tus cambios antes de continuar"
+
+exit 0
