@@ -47,6 +47,7 @@ git checkout -b hotfix/correcion-urgente
 - `pre-commit`: bloquea commits directos en master/main y valida el mensaje.
 - `prepare-commit-msg`: agrega un prefijo por defecto si el mensaje está vacío.
 - `post-merge`: muestra un mensaje de recordatorio.
+- `pre-pull`: avisa antes de hacer pull cuando puede haber merge.
 
 ## Nota
 Los hooks se ejecutan desde el directorio `.githooks` gracias a:
