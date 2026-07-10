@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+echo "[hook] Ejecutando pre-commit"
+
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+if [ "$branch_name" = "master" ] || [ "$branch_name" = "main" ]; then
+  echo "[hook] No se permiten commits directos en master/main. Usa una rama feature/release/hotfix."
+  exit 1
+fi
+
+echo "[hook] pre-commit OK"
