@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+echo "[hook] post-merge ejecutado"
+echo "[hook] Recuerda revisar dependencias y actualizar tu entorno"

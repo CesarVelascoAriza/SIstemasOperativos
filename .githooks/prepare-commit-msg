@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+commit_msg_file="$1"
+commit_source="$2"
+
+if [ -z "$commit_msg_file" ]; then
+  exit 0
+fi
+
+if [ "$commit_source" = "message" ]; then
+  exit 0
+fi
+
+if [ ! -s "$commit_msg_file" ]; then
+  echo "[hook] Agregando prefijo por defecto"
+  printf "chore: " > "$commit_msg_file"
+fi
+
+echo "[hook] prepare-commit-msg OK"
